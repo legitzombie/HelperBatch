@@ -1,37 +1,4 @@
 @echo off
-
-REM  ▄▄▄██▀▀▀▄▄▄       ███▄ ▄███▓▓█████   ██████
-REM    ▒██  ▒████▄    ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒
-REM    ░██  ▒██  ▀█▄  ▓██    ▓██░▒███   ░ ▓██▄
-REM ▓██▄██▓ ░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒
-REM  ▓███▒   ▓█   ▓██▒▒██▒   ░██▒░▒████▒▒██████▒▒
-REM  ▒▓▒▒░   ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░
-REM  ▒ ░▒░    ▒   ▒▒ ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░
-REM  ░ ░ ░    ░   ▒   ░      ░      ░   ░  ░  ░
-REM  ░   ░        ░  ░       ░      ░  ░      ░
-REM
-REM          ▄▄▄█████▓ ██░ ██ ▓█████
-REM          ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀
-REM          ▒ ▓██░ ▒░▒██▀▀██░▒███
-REM          ░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄
-REM            ▒██▒ ░ ░▓█▒░██▓░▒████▒
-REM            ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░
-REM              ░     ▒ ░▒░ ░ ░ ░  ░
-REM            ░       ░  ░░ ░   ░
-REM                    ░  ░  ░   ░  ░
-REM
-REM  ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀▓█████  ██▀███
-REM ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒ ▓█   ▀ ▓██ ▒ ██▒
-REM ▒██▀▀██░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ▒███   ▓██ ░▄█ ▒
-REM ░▓█ ░██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ▒▓█  ▄ ▒██▀▀█▄
-REM ░▓█▒░██▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▒░██▓ ▒██▒
-REM  ▒ ░░▒░▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒░░ ▒░ ░░ ▒▓ ░▒▓░
-REM  ▒ ░▒░ ░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ░  ░  ░▒ ░ ▒░
-REM  ░  ░░ ░  ░   ▒   ░        ░ ░░ ░    ░     ░░   ░
-REM  ░  ░  ░      ░  ░░ ░      ░  ░      ░  ░   ░
-REM                   ░
-
-
 setlocal enabledelayedexpansion
 
 set "runbat=%~dp0..\Run.bat"
@@ -42,9 +9,7 @@ set "ZIP_INSTALLER=7z2301-x64.exe"
 set "SEVENZIP_PATH=C:\Program Files\7-Zip"
 set "SEVENZIP_EXE=%SEVENZIP_PATH%\7z.exe"
 
-"%SEVENZIP_EXE%" >nul 2>&1
-
-if errorlevel 0 (
+if exist "%SEVENZIP_EXE%" (
     goto :done
 )
 
@@ -61,7 +26,6 @@ echo Installing 7-Zip...
 
 if exist "%SEVENZIP_EXE%" (
     echo 7-Zip installed successfully.
-	goto :check_user_path
 ) else (
     echo 7-Zip may not have installed correctly.
 )
