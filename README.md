@@ -1,6 +1,6 @@
 # HelperBatch
 
-Helper files i used to make new mods and update them. 
+Helper files i use to make new mods and update them. 
 
 Some are shared amongst all mods, others are unique and need to be configured.
 
