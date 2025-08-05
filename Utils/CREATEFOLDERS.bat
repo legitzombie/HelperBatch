@@ -7,9 +7,9 @@ for %%i in ("%script_path%\..") do set "temp_path=%%~fi\temp"
 
 if not exist "%temp_path%" (
 	mkdir "%temp_path%"
-	mkdir "%temp_path%\images"
-	mkdir "%temp_path%\raw\base\gameplay\gui\world\computers"
-	mkdir "%temp_path%\archive\base\gameplay\gui\world\computers"
+	mkdir "%temp_path%\video"
+	mkdir "%temp_path%\raw\base\movies\fullscreen\logo_splashscreen"
+	mkdir "%temp_path%\archive\base\movies\fullscreen\logo_splashscreen"
 ) 
 
 for %%i in ("%script_path%\..") do set "perm_path=%%~fi\archive\pc\mod"
