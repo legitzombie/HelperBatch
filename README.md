@@ -1,7 +1,9 @@
 # HelperBatch
 
 Helper files i used to make new mods and update them. 
+
 Some are shared amongst all mods, others are unique and need to be configured.
+
 It's a work in progress... Aiming for it to be more streamlined in the future. 
 
 # Troubleshooting
