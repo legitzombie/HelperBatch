@@ -24,7 +24,6 @@ if exist "%VERSION_FILE%" (
 )
 
 if "%REMOTE_VERSION%"=="%LOCAL_VERSION%" (
-    echo [INFO] Helpers are already up to date.
     goto :done
 )
 
@@ -38,4 +37,5 @@ echo %REMOTE_VERSION%>"%VERSION_FILE%"
 echo [INFO] Helpers updated to version %REMOTE_VERSION%.
 
 :done
+
 exit /b 0
