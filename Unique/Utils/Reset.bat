@@ -1,8 +1,40 @@
 @echo off
+
+REM  ▄▄▄██▀▀▀▄▄▄       ███▄ ▄███▓▓█████   ██████
+REM    ▒██  ▒████▄    ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒
+REM    ░██  ▒██  ▀█▄  ▓██    ▓██░▒███   ░ ▓██▄
+REM ▓██▄██▓ ░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒
+REM  ▓███▒   ▓█   ▓██▒▒██▒   ░██▒░▒████▒▒██████▒▒
+REM  ▒▓▒▒░   ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░
+REM  ▒ ░▒░    ▒   ▒▒ ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░
+REM  ░ ░ ░    ░   ▒   ░      ░      ░   ░  ░  ░
+REM  ░   ░        ░  ░       ░      ░  ░      ░
+REM
+REM          ▄▄▄█████▓ ██░ ██ ▓█████
+REM          ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀
+REM          ▒ ▓██░ ▒░▒██▀▀██░▒███
+REM          ░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄
+REM            ▒██▒ ░ ░▓█▒░██▓░▒████▒
+REM            ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░
+REM              ░     ▒ ░▒░ ░ ░ ░  ░
+REM            ░       ░  ░░ ░   ░
+REM                    ░  ░  ░   ░  ░
+REM
+REM  ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀▓█████  ██▀███
+REM ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒ ▓█   ▀ ▓██ ▒ ██▒
+REM ▒██▀▀██░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ▒███   ▓██ ░▄█ ▒
+REM ░▓█ ░██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ▒▓█  ▄ ▒██▀▀█▄
+REM ░▓█▒░██▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▒░██▓ ▒██▒
+REM  ▒ ░░▒░▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒░░ ▒░ ░░ ▒▓ ░▒▓░
+REM  ▒ ░▒░ ░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ░  ░  ░▒ ░ ▒░
+REM  ░  ░░ ░  ░   ▒   ░        ░ ░░ ░    ░     ░░   ░
+REM  ░  ░  ░      ░  ░░ ░      ░  ░      ░  ░   ░
+REM  
+
 setlocal enabledelayedexpansion
 
 set "script_path=%~dp0"
-set "targetMod=CustomWallpapers.archive"
+set "targetMod=Custom.archive"
 
 set "defaultSteamPath=%ProgramFiles(x86)%\Steam"
 set "libraryFoldersFile=%defaultSteamPath%\steamapps\libraryfolders.vdf"

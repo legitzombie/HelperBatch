@@ -1,4 +1,36 @@
 @echo off
+
+REM  ▄▄▄██▀▀▀▄▄▄       ███▄ ▄███▓▓█████   ██████
+REM    ▒██  ▒████▄    ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒
+REM    ░██  ▒██  ▀█▄  ▓██    ▓██░▒███   ░ ▓██▄
+REM ▓██▄██▓ ░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒
+REM  ▓███▒   ▓█   ▓██▒▒██▒   ░██▒░▒████▒▒██████▒▒
+REM  ▒▓▒▒░   ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░
+REM  ▒ ░▒░    ▒   ▒▒ ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░
+REM  ░ ░ ░    ░   ▒   ░      ░      ░   ░  ░  ░
+REM  ░   ░        ░  ░       ░      ░  ░      ░
+REM
+REM          ▄▄▄█████▓ ██░ ██ ▓█████
+REM          ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀
+REM          ▒ ▓██░ ▒░▒██▀▀██░▒███
+REM          ░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄
+REM            ▒██▒ ░ ░▓█▒░██▓░▒████▒
+REM            ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░
+REM              ░     ▒ ░▒░ ░ ░ ░  ░
+REM            ░       ░  ░░ ░   ░
+REM                    ░  ░  ░   ░  ░
+REM
+REM  ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀▓█████  ██▀███
+REM ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒ ▓█   ▀ ▓██ ▒ ██▒
+REM ▒██▀▀██░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ▒███   ▓██ ░▄█ ▒
+REM ░▓█ ░██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ▒▓█  ▄ ▒██▀▀█▄
+REM ░▓█▒░██▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▒░██▓ ▒██▒
+REM  ▒ ░░▒░▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒░░ ▒░ ░░ ▒▓ ░▒▓░
+REM  ▒ ░▒░ ░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ░  ░  ░▒ ░ ▒░
+REM  ░  ░░ ░  ░   ▒   ░        ░ ░░ ░    ░     ░░   ░
+REM  ░  ░  ░      ░  ░░ ░      ░  ░      ░  ░   ░
+REM                   ░
+
 setlocal
 
 set "script_path=%~dp0"
@@ -10,10 +42,10 @@ for %%i in ("%script_path%\..") do set "perm_path=%%~fi/archive/pc/mod"
 
 
 for %%i in ("%script_path%\..") do set "wallpaper_path=%%~fi\temp\raw"
-for %%i in ("%script_path%\..") do set "temp_path=%%~fi\temp\archive\base\gameplay\gui\world\computers"
+for %%i in ("%script_path%\..") do set "temp_path=%%~fi\temp\archive\base\"
 
 "%cli_path%" pack -p "%archive_path%" -o "%perm_path%"
 
-rename "%perm_path%\archive.archive" "CustomWallpapers.archive"
+rename "%perm_path%\archive.archive" "Custom.archive"
 
 endlocal

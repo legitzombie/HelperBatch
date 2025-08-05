@@ -1,4 +1,36 @@
 @echo off
+
+REM  ▄▄▄██▀▀▀▄▄▄       ███▄ ▄███▓▓█████   ██████
+REM    ▒██  ▒████▄    ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒
+REM    ░██  ▒██  ▀█▄  ▓██    ▓██░▒███   ░ ▓██▄
+REM ▓██▄██▓ ░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒
+REM  ▓███▒   ▓█   ▓██▒▒██▒   ░██▒░▒████▒▒██████▒▒
+REM  ▒▓▒▒░   ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░
+REM  ▒ ░▒░    ▒   ▒▒ ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░
+REM  ░ ░ ░    ░   ▒   ░      ░      ░   ░  ░  ░
+REM  ░   ░        ░  ░       ░      ░  ░      ░
+REM
+REM          ▄▄▄█████▓ ██░ ██ ▓█████
+REM          ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀
+REM          ▒ ▓██░ ▒░▒██▀▀██░▒███
+REM          ░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄
+REM            ▒██▒ ░ ░▓█▒░██▓░▒████▒
+REM            ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░
+REM              ░     ▒ ░▒░ ░ ░ ░  ░
+REM            ░       ░  ░░ ░   ░
+REM                    ░  ░  ░   ░  ░
+REM
+REM  ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀▓█████  ██▀███
+REM ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒ ▓█   ▀ ▓██ ▒ ██▒
+REM ▒██▀▀██░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ▒███   ▓██ ░▄█ ▒
+REM ░▓█ ░██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ▒▓█  ▄ ▒██▀▀█▄
+REM ░▓█▒░██▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▒░██▓ ▒██▒
+REM  ▒ ░░▒░▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒░░ ▒░ ░░ ▒▓ ░▒▓░
+REM  ▒ ░▒░ ░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ░  ░  ░▒ ░ ▒░
+REM  ░  ░░ ░  ░   ▒   ░        ░ ░░ ░    ░     ░░   ░
+REM  ░  ░  ░      ░  ░░ ░      ░  ░      ░  ░   ░
+REM  
+
 setlocal
 
 set "script_path=%~dp0"
@@ -7,9 +39,9 @@ for %%i in ("%script_path%\..") do set "temp_path=%%~fi\temp"
 
 if not exist "%temp_path%" (
 	mkdir "%temp_path%"
-	mkdir "%temp_path%\images"
-	mkdir "%temp_path%\raw\base\gameplay\gui\world\computers"
-	mkdir "%temp_path%\archive\base\gameplay\gui\world\computers"
+	mkdir "%temp_path%\type\"
+	mkdir "%temp_path%\raw\base\"
+	mkdir "%temp_path%\archive\base\"
 ) 
 
 for %%i in ("%script_path%\..") do set "perm_path=%%~fi\archive\pc\mod"

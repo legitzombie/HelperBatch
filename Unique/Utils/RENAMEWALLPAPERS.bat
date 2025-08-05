@@ -1,12 +1,43 @@
 @echo off
+
+REM  ▄▄▄██▀▀▀▄▄▄       ███▄ ▄███▓▓█████   ██████
+REM    ▒██  ▒████▄    ▓██▒▀█▀ ██▒▓█   ▀ ▒██    ▒
+REM    ░██  ▒██  ▀█▄  ▓██    ▓██░▒███   ░ ▓██▄
+REM ▓██▄██▓ ░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄   ▒   ██▒
+REM  ▓███▒   ▓█   ▓██▒▒██▒   ░██▒░▒████▒▒██████▒▒
+REM  ▒▓▒▒░   ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░▒ ▒▓▒ ▒ ░
+REM  ▒ ░▒░    ▒   ▒▒ ░░  ░      ░ ░ ░  ░░ ░▒  ░ ░
+REM  ░ ░ ░    ░   ▒   ░      ░      ░   ░  ░  ░
+REM  ░   ░        ░  ░       ░      ░  ░      ░
+REM
+REM          ▄▄▄█████▓ ██░ ██ ▓█████
+REM          ▓  ██▒ ▓▒▓██░ ██▒▓█   ▀
+REM          ▒ ▓██░ ▒░▒██▀▀██░▒███
+REM          ░ ▓██▓ ░ ░▓█ ░██ ▒▓█  ▄
+REM            ▒██▒ ░ ░▓█▒░██▓░▒████▒
+REM            ▒ ░░    ▒ ░░▒░▒░░ ▒░ ░
+REM              ░     ▒ ░▒░ ░ ░ ░  ░
+REM            ░       ░  ░░ ░   ░
+REM                    ░  ░  ░   ░  ░
+REM
+REM  ██░ ██  ▄▄▄       ▄████▄   ██ ▄█▀▓█████  ██▀███
+REM ▓██░ ██▒▒████▄    ▒██▀ ▀█   ██▄█▒ ▓█   ▀ ▓██ ▒ ██▒
+REM ▒██▀▀██░▒██  ▀█▄  ▒▓█    ▄ ▓███▄░ ▒███   ▓██ ░▄█ ▒
+REM ░▓█ ░██ ░██▄▄▄▄██ ▒▓▓▄ ▄██▒▓██ █▄ ▒▓█  ▄ ▒██▀▀█▄
+REM ░▓█▒░██▓ ▓█   ▓██▒▒ ▓███▀ ░▒██▒ █▄░▒████▒░██▓ ▒██▒
+REM  ▒ ░░▒░▒ ▒▒   ▓▒█░░ ░▒ ▒  ░▒ ▒▒ ▓▒░░ ▒░ ░░ ▒▓ ░▒▓░
+REM  ▒ ░▒░ ░  ▒   ▒▒ ░  ░  ▒   ░ ░▒ ▒░ ░ ░  ░  ░▒ ░ ▒░
+REM  ░  ░░ ░  ░   ▒   ░        ░ ░░ ░    ░     ░░   ░
+REM  ░  ░  ░      ░  ░░ ░      ░  ░      ░  ░   ░
+REM  
+
 setlocal enabledelayedexpansion
 
 set "script_path=%~dp0"
 
-for %%i in ("%script_path%\..") do set "source_path=%%~fi\Wallpapers"
+for %%i in ("%script_path%\..") do set "source_path=%%~fi\Image"
 for %%i in ("%script_path%\..") do set "dest_path=%%~fi\temp\images"
 
-REM Create destination folder if it doesn't exist
 if not exist "%dest_path%" mkdir "%dest_path%"
 
 set count=0
