@@ -38,8 +38,8 @@ def safe_path(p: Path):
     return str(p).replace("\\", "\\\\")
 
 icon_folder = safe_path(parent_folder / "temp" / "images")
-output_folder = safe_path(parent_folder / "temp" / "raw" + "CUSTOMPATH" )
-atlas_name = "CHANGETHENAME"
+output_folder = safe_path(parent_folder / "temp" / "raw" / Path(r"INKATLASPATH") )
+atlas_name = "CUSTOMINKATLASNAME"
 
 url = "https://raw.githubusercontent.com/DoctorPresto/Cyberpunk-Helper-Scripts/main/generate_inkatlas.py"
 response = requests.get(url)
@@ -64,4 +64,5 @@ for line in lines:
 output_file = current_folder / "generate_inkatlas.py"
 with open(output_file, "w", encoding="utf-8") as f:
     f.write("\n".join(modified_lines) + "\n") 
+
 
