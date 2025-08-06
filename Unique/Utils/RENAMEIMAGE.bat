@@ -44,13 +44,10 @@ set count=0
 
 for %%f in ("%source_path%\*") do (
     set "ext=%%~xf"
-    copy "%%f" "%dest_path%\wallpaper_generic-1!ext!" >nul
-	copy "%%f" "%dest_path%\wallpaper_generic!ext!" >nul
-	copy "%%f" "%dest_path%\wallpaper_maelstorm!ext!" >nul
-	copy "%%f" "%dest_path%\wallpaper_militech!ext!" >nul
-	copy "%%f" "%dest_path%\wallpaper_konpeki!ext!" >nul
+    copy "%%f" "%dest_path%\CHANGETHENAME!ext!" >nul
     set /a count+=1
 )
 
 endlocal
+
 
