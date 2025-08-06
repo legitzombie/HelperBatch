@@ -40,7 +40,7 @@ for %%i in ("%script_path%\..") do set "temp_path=%%~fi\temp"
 if not exist "%temp_path%" (
 	mkdir "%temp_path%"
 	mkdir "%temp_path%\type\"
-	mkdir "%temp_path%\raw\base\"
+	mkdir "%temp_path%\raw\archive\base\"
 	mkdir "%temp_path%\archive\base\"
 ) 
 
@@ -52,5 +52,6 @@ if exist "%root_path%" (
 )
 
 mkdir "%perm_path%"
+
 
 endlocal
