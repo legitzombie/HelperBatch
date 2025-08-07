@@ -44,10 +44,11 @@ set count=0
 
 for %%f in ("%source_path%\*") do (
     set "ext=%%~xf"
-    copy "%%f" "%dest_path%\CHANGETHENAME!ext!" >nul
+    copy "%%f" "%dest_path%\PARTNAME!ext!" >nul
     set /a count+=1
 )
 
 endlocal
+
 
 
