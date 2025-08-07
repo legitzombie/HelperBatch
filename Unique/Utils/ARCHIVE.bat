@@ -40,11 +40,12 @@ for %%i in ("%script_path%\..") do set "output_path=%%~fi"
 for %%i in ("%script_path%\..") do set "archive_path=%%~fi/temp/archive"
 for %%i in ("%script_path%\..") do set "perm_path=%%~fi/archive/pc/mod"
 
-for %%i in ("%script_path%\..") do set "temp_path=%%~fi/temp\archive\base\"
+for %%i in ("%script_path%\..") do set "temp_path=%%~fi\temp\archive\base\"
 
 "%cli_path%" pack -p "%archive_path%" -o "%perm_path%"
 
 rename "%perm_path%\archive.archive" "Custom.archive"
 
 endlocal
+
 
