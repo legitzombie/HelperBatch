@@ -58,7 +58,7 @@ call Utils/GETCLI.bat
 
 call Utils/CREATEFOLDERS.bat
 
-call Utils/RENAMEWALLPAPERS.bat
+call Utils/RENAMEIMAGE.bat
 
 call Utils/GETATLASGENERATOR.bat
 
@@ -73,5 +73,6 @@ call Utils/ARCHIVE.bat
 call Utils/CLEANUP.bat
 
 call Utils/FINDGAME.bat
+
 
 endlocal
